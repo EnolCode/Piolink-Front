@@ -1,0 +1,58 @@
+@use "./ResetCss.scss";
+@use "./_colors.scss" as c;
+@use "./_fonts.scss";
+
+body {
+	font-family: "Roboto";
+	// background: map-get(c.$colors, "grey-dark");
+}
+
+// Clases reutilizables
+.blue {
+	color: map-get(c.$colors, "blue");
+}
+
+.red{
+  color: map-get(c.$colors, "red");  
+}
+
+.router-link-exact-active {
+	font-weight: bold;
+	color: map-get(c.$colors, "red");
+}
+
+.inline {
+	display: inline;
+}
+
+.hidden {
+	display: none;
+}
+
+.block {
+  display: block;
+}
+
+.error{
+  color: map-get(c.$colors, "red");
+  font-size: .8em;
+  font-weight: 600;
+  display: block;
+}
+
+// Oruga notifications
+.error-notification,
+.success-notification {
+	padding: 0.5em;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 12%), 0 0 6px rgb(0 0 0 / 4%);
+	animation: fadeIn 0.5s;
+}
+
+.error-notification {
+	background: rgb(236, 33, 33);
+}
+
+.success-notification {
+	background: green;
+}
